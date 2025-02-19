@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 
 export default function App() {
   const [number1, setNumber1] = useState(0);
@@ -33,8 +33,7 @@ export default function App() {
         answer = num1 * num2;
         break;
       case '/':
-        // To ensure integer division, choose a divisor and a result then compute the dividend.
-        num2 = Math.floor(Math.random() * 9) + 1; // Avoid 0
+        num2 = Math.floor(Math.random() * 9) + 1;
         answer = Math.floor(Math.random() * 10) + 1;
         num1 = num2 * answer;
         break;
@@ -66,31 +65,38 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.question}>
-        {number1} {operator} {number2} = ?
-      </Text>
-      <TextInput
-        style={styles.input}
-        keyboardType='numeric'
-        value={userAnswer}
-        onChangeText={setUserAnswer}
-        placeholder="Your answer"
-      />
-      <Button title="Submit" onPress={handleSubmit} />
-      <View style={styles.scoreContainer}>
-        <Text style={styles.greenScore}>Green Points: {greenPoints}</Text>
-        <Text style={styles.redScore}>Red Points: {redPoints}</Text>
-      </View>
-    </View>
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={60} // adjust this value if needed
+    >
+      <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
+        <Text style={styles.question}>
+          {number1} {operator} {number2} = ?
+        </Text>
+        <TextInput
+          style={styles.input}
+          keyboardType='numeric'
+          value={userAnswer}
+          onChangeText={setUserAnswer}
+          placeholder="Your answer"
+        />
+        <Button title="Submit" onPress={handleSubmit} />
+        <View style={styles.scoreContainer}>
+          <Text style={styles.greenScore}>Green Points: {greenPoints}</Text>
+          <Text style={styles.redScore}>Red Points: {redPoints}</Text>
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 20,
     backgroundColor: '#fff'
   },
   question: {
@@ -100,7 +106,7 @@ const styles = StyleSheet.create({
   input: {
     borderColor: '#000',
     borderWidth: 1,
-    width: '50%',
+    width: '80%',
     padding: 10,
     fontSize: 18,
     marginBottom: 20,
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    width: '80%'
+    width: '100%'
   },
   greenScore: {
     color: 'green',
