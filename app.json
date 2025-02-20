@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "native-calc",
-    "slug": "native-calc",
+    "slug": "nativecalc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "369f7c6e-c21f-485b-a0e6-e7bb89f228d2"
+      }
+    },
+    "owner": "sebkar"
   }
 }
