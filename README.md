@@ -1,54 +1,79 @@
-# Welcome to your Expo app 👋
+# Native Calc 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to **Native Calc** – an interactive application designed to help you master mental calculations!
 
-## TODO
+## TODO 
 
-- https://reactnative.dev/docs/getting-started
+- [] Configuration
+  - [] different calculation modes
+  - [] timer or not?
+  - [] life
+  - [] levels
+  - [] bosses? 
+  - [] nice colors and effects
 
-## Get started
+## Overview
 
-1. Install dependencies
+Native Calc is your go-to app for learning how to perform mental arithmetic through engaging math challenges. Strengthen your calculation skills, track your progress, and enjoy a fun learning experience.
+
+## Key Features
+
+- **Interactive Challenges:** Engage with a variety of tasks to sharpen your calculation skills.
+- **User-Friendly Interface:** A simple, intuitive design focused on learning.
+- **Progress Tracking:** Monitor your improvements as you tackle more advanced challenges.
+
+## Getting Started
+
+### Installation
+
+1. **Clone the Repository**  
+   Clone the repository to your local machine:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. **Install Dependencies**  
+   Navigate to your project directory and install all the necessary packages:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+### Running the App
 
-   ```bash
-    npx expo start
-   ```
+Start the development server using the following command:
 
-In the output, you'll find options to open the app in a
+```bash
+npm start
+```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Begin building and customizing your project by editing files in the **app** directory. This project leverages file-based routing to streamline navigation.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Resetting the Project
 
-## Get a fresh project
-
-When you're ready, run:
+If you need a fresh project setup, run:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This command moves the starter code to the **app-example** folder and resets the **app** directory, giving you a clean slate for development.
 
-## Learn more
+## Additional Resources
 
-To learn more about developing your project with Expo, look at the following resources:
+Enhance your development experience with these resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **Documentation:** Check out the official documentation related to your project’s framework and libraries.
+- **Tutorials:** Follow step-by-step guides to refine your skills and explore advanced techniques.
 
-## Join the community
+## Community
 
-Join our community of developers creating universal apps.
+Connect with other developers and share your journey:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **GitHub:** Explore open source projects and contribute.
+- **Community Forums:** Engage with fellow developers to ask questions and exchange ideas.
+
+---
+
+Embark on your journey to mental math mastery with Native Calc today!
